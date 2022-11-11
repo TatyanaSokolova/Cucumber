@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/s08io2gi9ow8r8lh/branch/master?svg=true)](https://ci.appveyor.com/project/TatyanaSokolova/cucumber/branch/master)

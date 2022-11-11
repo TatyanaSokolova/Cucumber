@@ -18,11 +18,11 @@ public class DashboardPage {
         heading.shouldBe(visible);
     }
 
-    public int getFirstCardBalance() {
-        val text = cards.first().text();
+    public String getFirstCardBalance(String firstCard) {
+        val text = cards.get(Integer.parseInt(firstCard) - 1).text();
         String[] subtext = text.split(":");
         String balance = subtext[1].substring(0, subtext[1].indexOf("р.")).trim();
-        return Integer.parseInt(balance);
+        return balance;
     }
 
     public int getSecondCardBalance() {
@@ -33,13 +33,13 @@ public class DashboardPage {
     }
 
 
-    public TransferPage selectFirstCardToTransfer() {
-        button.first().click();
+    public TransferPage selectFirstCardToTransfer(String firstCard) {
+        button.get(Integer.parseInt(firstCard) - 1).click();
         return new TransferPage();
     }
 
-    public TransferPage selectSecondCardToTransfer() {
-        button.last().click();
+    public TransferPage selectSecondCardToTransfer(String secondCard) {
+        button.get(Integer.parseInt(secondCard)).click();
         return new TransferPage();
     }
 }

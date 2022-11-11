@@ -22,9 +22,9 @@ public class TransferPage {
         headingText.shouldBe(visible);
     }
 
-    public DashboardPage makeValidTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
-        amount.setValue(amountToTransfer);
-        from.setValue(cardInfo.getCardNumber());
+    public DashboardPage makeValidTransfer(String amountOfTransfer, String secondCard) {
+        amount.setValue(amountOfTransfer);
+        from.setValue(secondCard);
         actionTransfer.click();
         return new DashboardPage();
     }
